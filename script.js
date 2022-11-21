@@ -9,12 +9,10 @@ function createSquareDiv(m) {
 
 function prepareContainer(m) {
     const SCALE = .8;
-    const width = window.innerWidth * SCALE;
-    const height = window.innerHeight * SCALE;
-    const dimension = Math.floor(Math.min(width, height)/m);
-    const columnPxSize = `${dimension}px `;
-    let columnPxStyle = columnPxSize.repeat(m);
-    columnPxStyle = columnPxStyle.slice(0, columnPxStyle.length - 1)
+    const dimension = Math.floor(Math.min(window.innerWidth * SCALE, window.innerHeight * SCALE));
+    container.style.width = `${dimension}px`; 
+    container.style.height = `${dimension}px`; 
+    columnPxStyle = `repeat(${m}, 1fr)`;
     container.style.gridTemplateColumns = columnPxStyle;
 }
 
