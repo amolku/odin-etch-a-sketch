@@ -1,0 +1,15 @@
+#newGrid {
+    margin-bottom: 25px;
+}
+
+#container {
+    display: grid;
+    grid-gap: 1px;
+    padding: 1px;
+    border: black solid 1px;   
+}
+
+#container div {
+    aspect-ratio: 1;
+    border: 1px black solid;
+}
